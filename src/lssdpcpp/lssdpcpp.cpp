@@ -25,7 +25,6 @@
 #include <url/url.hpp>
 #include <string.h>
 #include <string>
-#include <iostream>
 #include <map>
 
 #ifdef WIN32

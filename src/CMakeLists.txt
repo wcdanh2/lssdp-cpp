@@ -34,6 +34,9 @@ target_include_directories(lssdpcpp PUBLIC
 if(MSVC)
     target_link_libraries(lssdpcpp PUBLIC Ws2_32.lib Iphlpapi.lib)
 endif()
+if(WIN32)
+    target_link_libraries(lssdpcpp PUBLIC Ws2_32.lib Iphlpapi.lib)
+endif()
 
 install(TARGETS lssdpcpp
         EXPORT lssdpcpp

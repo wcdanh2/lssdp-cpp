@@ -23,6 +23,8 @@
 add_executable(test_service_finder
                test_service_finder.cpp)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wa,-mbig-obj")
+
 target_link_libraries(test_service_finder PRIVATE lssdpcpp)
 add_test(NAME test_service_finder_test
          COMMAND $<TARGET_FILE:test_service_finder>)

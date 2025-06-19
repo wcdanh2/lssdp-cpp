@@ -23,6 +23,8 @@
 add_executable(test_network_interfaces
                test_network_interfaces.cpp)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wa,-mbig-obj")
+
 target_link_libraries(test_network_interfaces PRIVATE lssdpcpp)
 add_test(NAME test_network_interfaces_test
          COMMAND $<TARGET_FILE:test_network_interfaces>)
